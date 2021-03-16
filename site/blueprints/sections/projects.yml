@@ -1,0 +1,8 @@
+type: pages
+template: project
+status: published
+headline: Projets publiés
+parent: site.find('realisations')
+image:
+  query: page.cover.toFile
+  back: black

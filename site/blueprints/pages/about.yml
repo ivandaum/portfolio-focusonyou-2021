@@ -1,0 +1,107 @@
+title: À propos
+
+columns:
+  - width: 2/3
+    sections:
+      info:
+        type: fields
+        fields:
+          mainTitle:
+            type: writer
+            marks: false
+            label: Titre
+
+          cover:
+            extends: fields/images
+            max: 1
+            label: Image / vidéo de fond
+
+          showreelHeadline:
+            type: headline
+            label: Showreel
+
+          showreelBtn:
+            label: Texte du bouton
+            width: 1/2
+            type: text
+
+          showreelUrl:
+            label: Url du Showreel
+            width: 1/2
+            type: url
+
+  - width: 2/3
+    sections:
+      intro:
+        type: fields
+        fields:
+          introductionHeadline:
+            type: headline
+            label: Introduction
+
+          introduction:
+            type: writer
+            label: Titre
+            marks: false
+
+          text:
+            type: textarea
+            buttons: false
+            label: Texte explicatif
+
+          pictures:
+            extends: fields/images
+            max: 2
+
+  - width: 2/3
+    sections:
+      servicesDatas:
+        type: fields
+        fields:
+          serviceHeadline:
+            type: headline
+            label: Services
+
+          serviceTitle:
+            type: writer
+            marks: false
+            label: Titre
+
+          services:
+            type: structure
+            label: Sercices
+            fields:
+              title:
+                type: text
+                label: Titre du service
+                width: 1/3
+              description:
+                type: textarea
+                width: 2/3
+                label: Description
+                buttons: false
+
+  - width: 2/3
+    sections:
+      conclusionWording:
+        type: fields
+        fields:
+          conclusionHeadline:
+            type: headline
+            label: Contactez-nous
+
+          conclusionBtn:
+            type: text
+            label: Texte du bouton
+            width: 1/2
+
+          conclusionPage:
+            type: pages
+            label: Page du bouton
+            max: 1
+            width: 1/2
+
+          conclusionSubtitle:
+            type: writer
+            marks: false
+            label: Sur-titre du bouton

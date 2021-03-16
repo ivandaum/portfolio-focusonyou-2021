@@ -1,0 +1,45 @@
+@mixin object-fit($value: cover) {
+  height: 100%;
+  width: 100%;
+  object-fit: $value;
+  object-position: center center;
+}
+
+@mixin font-responsive($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+
+  @if $fallback {
+    font-size: $fallback;
+  }
+
+  font-size: $responsive;
+}
+
+@function vh($percent) {
+  @return calc(var(--vh) * #{$percent});
+}
+
+@mixin fontsize($px, $min, $max: false) {
+  $ref: 48px;
+  $vw: 3.5vw;
+
+  @include font-responsive($vw / $ref * $px, $min, $max);
+}
+
+@function zindex($value) {
+  @return map-get($zIndex, $value);
+}

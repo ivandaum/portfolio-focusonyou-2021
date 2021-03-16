@@ -1,0 +1,25 @@
+title: Réalisations
+
+columns:
+  - width: 2/3
+    sections:
+      info:
+        type: fields
+        fields:
+          extends: fields/title
+          categories:
+            type: tags
+            help: Ajoutez une catégorie dans cette liste afin de la rendre disponible pour les projets.
+
+  - width: 2/3
+    sections:
+      projects: sections/projects
+
+  - width: 1/3
+    sections:
+      drafts:
+        extends: sections/projects
+        headline: Brouillons
+        help: Les brouillons ne seront pas affichés dans la page des projets
+        status: draft
+        empty: Il n'y a pas de brouillons. Cliquez ici pour ajouter un nouveau projet.

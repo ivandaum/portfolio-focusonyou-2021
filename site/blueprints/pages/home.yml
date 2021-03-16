@@ -1,0 +1,8 @@
+title: Accueil
+fields:
+  projects:
+    label: Projets affichés
+    type: pages
+    layout: cards
+    max: 5
+    query: site.find('realisations').children

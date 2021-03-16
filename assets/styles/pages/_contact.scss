@@ -1,0 +1,17 @@
+.Contact {
+  &__description {
+    line-height: 1.56em;
+  }
+
+  &__row {
+    margin-top: calc(var(--padding) * 1.5);
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  ul li {
+    margin-right: var(--padding);
+  }
+}

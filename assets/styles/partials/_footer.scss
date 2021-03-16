@@ -1,0 +1,11 @@
+.Footer {
+  margin-top: calc(var(--padding) * 2);
+
+  &__content {
+    padding: var(--padding) 0;
+  }
+
+  li {
+    margin-left: 1.5em;
+  }
+}

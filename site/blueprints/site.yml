@@ -1,0 +1,29 @@
+title: Focus on you
+
+columns:
+  - width: 1/3
+    sections:
+      drafts:
+        extends: sections/projects
+        status: draft
+        headline: Projets en brouillons
+
+  - width: 1/3
+    sections:
+      projects: sections/projects
+
+  - width: 1/3
+    sections:
+      pages:
+        type: pages
+        headline: Menu
+        image:
+          query: page.cover.toFile
+          back: black
+        max: 5
+        templates:
+          - contact
+          - home
+          - galery
+          - about
+          - projects

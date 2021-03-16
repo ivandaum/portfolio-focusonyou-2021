@@ -1,0 +1,13 @@
+type: group
+fields:
+  mainTitle:
+    type: writer
+    marks: false
+    label: Titre
+    width: 1/2
+
+  subTitle:
+    type: writer
+    marks: false
+    label: Sous-titre
+    width: 1/2

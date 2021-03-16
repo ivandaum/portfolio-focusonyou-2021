@@ -1,0 +1,35 @@
+.is-justified {
+  &-x {
+    justify-content: space-between;
+  }
+}
+
+.is-center {
+  align-items: center;
+  justify-content: center;
+
+  &-y {
+    align-items: center;
+  }
+}
+
+.is-baseline {
+  align-items: baseline;
+}
+
+.is-right {
+  &-y {
+    align-items: flex-end;
+  }
+
+  &-x {
+    justify-content: flex-end;
+  }
+}
+.no-shrink {
+  flex-shrink: 0;
+}
+
+.is-wrap {
+  flex-wrap: wrap;
+}

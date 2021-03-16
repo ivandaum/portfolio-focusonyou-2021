@@ -1,0 +1,35 @@
+html {
+  line-height: 1.25;
+  -webkit-text-size-adjust: none;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: var(--color-white);
+  font-family: var(--font-family);
+  background: var(--color-black);
+  font-style: normal;
+  font-weight: normal;
+  position: relative;
+  height: vh(100);
+  width: 100%;
+  letter-spacing: -0.3px;
+  overflow: hidden;
+}
+
+.App {
+  height: vh(100);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 var(--padding);
+}

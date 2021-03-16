@@ -1,0 +1,9 @@
+type: files
+layout: cards
+label: Images
+info: '{{ file.dimensions }}'
+image:
+  ratio: 5/4
+  cover: true
+  back: black
+size: small

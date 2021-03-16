@@ -1,0 +1,5 @@
+title: Image
+fields:
+  legend:
+    type: text
+    label: Légende

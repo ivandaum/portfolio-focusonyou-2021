@@ -1,0 +1,44 @@
+.Projects {
+  &__content {
+    margin-top: 15rem;
+  }
+
+  picture img {
+    @include object-fit;
+  }
+
+  picture {
+    @include object-fit;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: zindex(base);
+  }
+
+  &__info {
+    left: 0;
+    bottom: 0;
+    z-index: zindex(section);
+    padding: 0 0 var(--padding) var(--padding);
+
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .item {
+    &-1 {
+      padding-top: 120%;
+    }
+
+    &-3 {
+      padding-top: 50%;
+    }
+
+    &-4,
+    &-2 {
+      padding-top: 100%;
+    }
+  }
+}

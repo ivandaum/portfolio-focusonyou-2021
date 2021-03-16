@@ -1,0 +1,43 @@
+.Galery {
+  &__content {
+    margin: 0 calc(-0.25 * var(--padding));
+    margin-top: 15rem;
+  }
+
+  &__picture {
+    margin-bottom: var(--padding);
+    padding: 0 calc(0.25 * var(--padding));
+
+    &--info {
+      padding: 0 0 calc(0.5 * var(--padding)) calc(0.5 * var(--padding));
+      z-index: zindex(section);
+      bottom: 0;
+      opacity: 0;
+      transition: opacity var(--speed) var(--bezier-in-out);
+    }
+
+    &--date {
+      font-size: 1rem;
+    }
+
+    &--title {
+      margin-top: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    picture {
+      z-index: zindex(base);
+      transition: opacity var(--speed) var(--bezier-in-out);
+    }
+
+    &:hover {
+      .Galery__picture--info {
+        opacity: 1;
+      }
+
+      picture {
+        opacity: 0.25;
+      }
+    }
+  }
+}

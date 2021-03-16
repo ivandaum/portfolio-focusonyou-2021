@@ -1,0 +1,32 @@
+<?php snippet('header') ?>
+<div class="Contact" data-router-view="contact">
+  <div class="container has-width-100">
+    <h1 class="is-main-title"><?= $title ?></h1>
+
+    <div class="is-flex">
+      <div class="is-6 is-column has-pr-1">
+        <div class="Contact__description has-color-grey has-fontsize-32"><?= $subtitle ?></div>
+        <div class="Contact__row">
+          <h2 class="has-color-lightgrey">Par email</h2>
+          <a class="has-fontsize-32 is-relative" href="mailto:<?= $email ?>"><?= $email ?></a>
+        </div>
+        <div class="Contact__row">
+          <h2 class="has-color-lightgrey">Par téléphone</h2>
+          <a class="has-fontsize-32 is-relative" href="tel:<?= $realPhone ?>"><?= $phone ?></a>
+        </div>
+        <div class="Contact__row">
+          <h2 class="has-color-lightgrey">Suivez-nous</h2>
+          <ul class="is-flex">
+            <?php foreach($social as $s): ?>
+            <li><a class="has-fontsize-32 is-relative" href="<?= $s->url() ?>"><?= $s->title() ?></a></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+      </div>
+      <div class="is-6 is-column has-pl-1">
+        <?= Image::create($cover); ?>
+      </div>
+    </div>
+  </div>
+</div>
+<?php snippet('footer') ?>

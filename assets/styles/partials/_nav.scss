@@ -1,0 +1,83 @@
+.Nav {
+  margin-top: 6em;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: zindex(nav);
+
+  &__btn {
+    height: 1.25em;
+    overflow: hidden;
+    width: 6em;
+
+    p {
+      height: 1.25em;
+      transition: transform var(--speed) var(--bezier-in-out);
+    }
+  }
+
+  &__iconOpen,
+  &__iconClose {
+    height: 1em;
+    width: 1em;
+    margin-left: 1rem;
+    margin-top: 0.2em;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 0.1rem;
+      width: 100%;
+      background: var(--color-white);
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transform-origin: center center;
+    }
+  }
+
+  &__iconOpen {
+    &::before {
+      transform: translateY(-0.2rem);
+    }
+    &::after {
+      transform: translateY(0.2rem);
+    }
+  }
+
+  &__iconClose {
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__content {
+    background: var(--color-darkgrey);
+    z-index: zindex(under-nav);
+    top: 0;
+    left: 0;
+  }
+
+  &__menu li {
+    margin-bottom: 0.52em;
+    font-size: 4.8rem;
+  }
+
+  &__categories li {
+    &:first-of-type {
+      margin-bottom: 1em;
+    }
+
+    margin-bottom: 0.5em;
+    line-height: 1.5em;
+  }
+}
+
+body.menuIsOpen .Nav__btn p {
+  transform: translateY(-1.25em);
+}

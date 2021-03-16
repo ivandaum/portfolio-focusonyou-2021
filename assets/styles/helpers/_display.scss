@@ -1,0 +1,72 @@
+.is-flex {
+  display: flex;
+}
+.is-block {
+  display: block;
+}
+
+.is-inlineflex {
+  display: inline-flex;
+}
+
+.is-absolute {
+  position: absolute;
+}
+
+.is-fixed {
+  position: fixed;
+}
+
+.is-relative {
+  position: relative;
+}
+
+.is-sticky {
+  position: relative;
+  position: sticky;
+  top: 0;
+}
+
+.is-hidden {
+  &-desktop {
+    @include desktop {
+      display: none !important;
+    }
+  }
+  &-tablet {
+    @include tablet-only {
+      display: none !important;
+    }
+  }
+}
+
+.is-column {
+  $colNumber: 12;
+  @for $i from 1 through $colNumber {
+    $v: $i / $colNumber * 100%;
+
+    &.is-#{$i} {
+      width: $v;
+    }
+
+    &.has-mr-#{$i} {
+      margin-right: $v;
+    }
+
+    &.has-mb-#{$i} {
+      margin-bottom: $v;
+    }
+
+    &.has-ml-#{$i} {
+      margin-left: $v;
+    }
+
+    &.has-pr-#{$i} {
+      padding-right: $v;
+    }
+
+    &.has-pl-#{$i} {
+      padding-left: $v;
+    }
+  }
+}

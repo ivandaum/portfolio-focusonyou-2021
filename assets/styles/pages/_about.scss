@@ -1,0 +1,74 @@
+.About {
+  .is-main-title {
+    margin-top: 0;
+  }
+
+  &__cover {
+    height: vh(100);
+    overflow: hidden;
+
+    &--content {
+      z-index: zindex(section);
+    }
+
+    &--picture {
+      z-index: zindex(base);
+    }
+
+    &--link {
+      margin: 0 auto;
+    }
+
+    .is-link {
+      margin-right: 3.5rem;
+    }
+    .icon {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+  }
+
+  &__introduction {
+    &--title {
+      font-size: 4rem;
+      margin: calc(var(--padding) * 2) 0 var(--padding) 0;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__services {
+    background: var(--color-darkgrey);
+    padding: 13rem 0;
+
+    &--number {
+      width: 1.5em;
+    }
+
+    &--btn {
+      padding: 3rem 0;
+      border-bottom: 0.1rem solid rgba(#fff, 0.3);
+    }
+
+    &--content {
+      overflow: hidden;
+      height: 0;
+    }
+
+    &--text {
+      padding: 1em 0;
+    }
+  }
+
+  &__conclusion {
+    &--content {
+      margin: 15rem 0;
+    }
+
+    &--link {
+      margin-top: 0.5em;
+    }
+  }
+}

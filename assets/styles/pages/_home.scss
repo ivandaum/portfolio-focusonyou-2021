@@ -1,0 +1,35 @@
+.Home {
+  &__menu {
+    bottom: 0;
+    z-index: zindex(section);
+
+    &--item {
+      padding-right: 1em;
+    }
+
+    &--link {
+      padding-bottom: 1.25em;
+      border-bottom: 0.2rem solid rgba(#fff, 0.4);
+    }
+
+    &--border {
+      background: var(--color-white);
+      height: 0.2rem;
+      bottom: -0.2rem;
+      position: absolute;
+      width: 50%;
+    }
+
+    &--title {
+      margin-top: 0.25em;
+    }
+  }
+
+  &__background {
+    z-index: zindex(base);
+
+    &--item picture {
+      @include object-fit;
+    }
+  }
+}

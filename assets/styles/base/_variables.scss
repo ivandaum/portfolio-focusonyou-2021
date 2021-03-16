@@ -1,0 +1,21 @@
+$zIndex: (
+  nav: 90,
+  under-nav: 89,
+  above-section: 11,
+  section: 10,
+  base: 1,
+);
+
+$fontWeight: (
+  normal: normal,
+  bold: bold,
+);
+
+$breakpoints: (
+  widescreen: 1280px,
+  desktop: 1000px,
+  tablet: 768px,
+  phone: 320px,
+);
+
+$font-path: '/dist/fonts/goodsans/';
