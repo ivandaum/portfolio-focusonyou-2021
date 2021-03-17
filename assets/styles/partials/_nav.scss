@@ -67,19 +67,47 @@
     top: 0;
     left: 0;
   }
+  &__scroller {
+    @include phone {
+      overflow-y: scroll;
+      padding: 10rem var(--padding);
+      display: block;
+      height: vh(100);
+    }
+  }
+
+  &__menu {
+    @include phone {
+      padding-bottom: var(--padding);
+    }
+  }
 
   &__menu li {
     margin-bottom: 0.52em;
     font-size: 4.8rem;
-  }
 
-  &__categories li {
-    &:first-of-type {
-      margin-bottom: 1em;
+    @include touch {
+      font-size: 4rem;
     }
 
-    margin-bottom: 0.5em;
-    line-height: 1.5em;
+    @include phone {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__categories {
+    ul {
+      margin-bottom: var(--padding);
+    }
+
+    li {
+      &:first-of-type {
+        margin-bottom: 1em;
+      }
+
+      margin-bottom: 0.5em;
+      line-height: 1.5em;
+    }
   }
 }
 
