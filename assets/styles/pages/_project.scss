@@ -1,0 +1,14 @@
+.Project {
+  &__specs {
+    margin: calc(var(--padding) * 2) 0 var(--padding);
+  }
+
+  &__spec {
+    margin-bottom: var(--padding);
+    padding-right: var(--padding);
+
+    &--title {
+      margin-bottom: 1rem;
+    }
+  }
+}

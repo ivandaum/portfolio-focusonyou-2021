@@ -4,7 +4,7 @@
     <h1 class="is-main-title"><?= $title ?></h1>
 
     <div class="is-flex">
-      <div class="is-6 is-column has-pr-1">
+      <div class="is-6 is-12-touch is-column has-pr-1">
         <div class="Contact__description has-color-grey has-fontsize-32"><?= $subtitle ?></div>
         <div class="Contact__row">
           <h2 class="has-color-lightgrey">Par email</h2>
@@ -23,10 +23,11 @@
           </ul>
         </div>
       </div>
-      <div class="is-6 is-column has-pl-1">
+      <div class="is-6 is-hidden-touch is-column has-pl-1">
         <?= Image::create($cover); ?>
       </div>
     </div>
+    <?php snippet('footer-menu') ?>
   </div>
 </div>
 <?php snippet('footer') ?>

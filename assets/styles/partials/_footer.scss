@@ -1,11 +1,32 @@
 .Footer {
   margin-top: calc(var(--padding) * 2);
 
+  @include phone {
+    font-size: 1.4rem;
+  }
+
   &__content {
     padding: var(--padding) 0;
+
+    @include phone {
+      flex-direction: column-reverse;
+    }
   }
 
   li {
-    margin-left: 1.5em;
+    margin-right: 1.5em;
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include phone {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  ul {
+    @include phone {
+      margin-top: var(--padding);
+    }
   }
 }

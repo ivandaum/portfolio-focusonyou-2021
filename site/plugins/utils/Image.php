@@ -36,8 +36,9 @@ class Image {
 
         if (!$file) return false;
 
-        $className = $file->dimensions()->orientation();
-        
+        $dimensions = $file->dimensions();
+        $className = $dimensions->orientation();
+
         if (empty($customSizes)) {
             $sizes = self::sizes;
         } else {
@@ -48,13 +49,15 @@ class Image {
         $title = $file->name();
         $img = null;
         $thumb = $file->resize(1);
+        $r = $dimensions->height / $dimensions->width * 100;
+        $r = str_replace(',', '.', (string) $r);
 
-        $html = "<picture class='is-picture-" . $className . " is-flex is-center'>";
+        $html = "<picture class='is-picture-" . $className . " is-flex is-center' style='padding-top:" . $r . "%'>";
         foreach($sizes as $size) {
             $img = $file->resize($size);
             $html .= "<source srcset='' media='(min-width: {$size}px)' type='$mime' data-srcset='{$img->url()}' />";
         }
-        $html .= "<img alt='$title' src='{$thumb->url()}' data-src='{$img->url()}' class='" . $imgClassname . "'/>";
+        $html .= "<img alt='$title' src='{$thumb->url()}' data-src='{$img->url()}' class='is-absolute " . $imgClassname . "'/>";
         $html .= "</picture>";
         return $html;
     }

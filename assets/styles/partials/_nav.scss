@@ -5,6 +5,11 @@
   right: 0;
   z-index: zindex(nav);
 
+  @include phone {
+    font-size: 1.4rem;
+    margin-top: 3em;
+  }
+
   &__btn {
     height: 1.25em;
     overflow: hidden;

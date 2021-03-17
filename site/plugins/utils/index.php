@@ -4,6 +4,7 @@ require 'Image.php';
 require 'Seo.php';
 require 'Svg.php';
 require 'Text.php';
+require 'Iframe.php';
 
 // Kirby::plugin('my/page-methods', [
 //     'pageMethods' => [

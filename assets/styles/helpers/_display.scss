@@ -38,6 +38,11 @@
       display: none !important;
     }
   }
+  &-touch {
+    @include touch {
+      display: none !important;
+    }
+  }
 }
 
 .is-column {
@@ -47,6 +52,18 @@
 
     &.is-#{$i} {
       width: $v;
+    }
+
+    &.is-#{$i}-touch {
+      @include touch {
+        width: $v;
+      }
+    }
+
+    &.is-#{$i}-phone {
+      @include phone {
+        width: $v;
+      }
     }
 
     &.has-mr-#{$i} {

@@ -11,4 +11,12 @@
   --speed: 500ms;
 
   --padding: 5rem;
+
+  @include touch {
+    --padding: 3.5rem;
+  }
+
+  @include phone {
+    --padding: 2.5rem;
+  }
 }

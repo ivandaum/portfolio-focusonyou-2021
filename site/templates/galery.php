@@ -1,6 +1,5 @@
 <?php snippet('header') ?>
-<div class="Galery" data-router-view="galery">
-  <div class="is-column has-width-100 container">
+<div class="Galery container" data-router-view="galery">
     <h1 class="is-main-title"><?= $title ?></h1>
     <div class="has-fontsize-24 has-color-grey"><?= $subtitle ?></div>
 
@@ -8,7 +7,7 @@
       <?php foreach($pictures as $picture): ?>
         <?php $isProject = $picture->page() && $picture->page()->template() != 'galery'; ?>
 
-        <div class="Galery__picture no-shrink has-height-100 is-relative is-column is-3">
+        <div class="Galery__picture no-shrink has-height-100 is-relative is-column is-3 is-4-touch is-6-phone">
           <?php if($isProject): ?>
             <a href="<?= $picture->page()->url() ?>" class="is-block">
           <?php endif; ?>
@@ -27,6 +26,6 @@
         </div>
       <?php endforeach; ?>
     </div>
-  </div>
+  <?php snippet('footer-menu') ?>
 </div>
 <?php snippet('footer') ?>

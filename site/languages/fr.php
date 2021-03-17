@@ -11,7 +11,12 @@ return [
     'translations' => [
       'site_name' => 'Focus On You',
       'site_description' => 'Focs On You est une société de production et de réalisation, spécialisée en court-métrages et clips.',
-      'credits' => '© Copyright 2021 Focusonyou. Tous droits réservés'
+      'credits' => '© Copyright 2021 Focusonyou. Tous droits réservés',
+      'category' => 'Type de projet',
+      'artist' => 'Artiste',
+      'client' => 'Client',
+      'realisator' => 'Réalisateur',
+      'productor' => 'Producteur'
     ],
     'url' => '/'
 ];

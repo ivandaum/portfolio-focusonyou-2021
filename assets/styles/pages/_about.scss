@@ -1,6 +1,10 @@
 .About {
   .is-main-title {
     margin-top: 0;
+
+    @include phone {
+      font-size: 2.4rem;
+    }
   }
 
   &__cover {
@@ -15,6 +19,12 @@
       z-index: zindex(base);
     }
 
+    picture,
+    picture img {
+      @include object-fit;
+      padding-top: 0 !important;
+    }
+
     &--link {
       margin: 0 auto;
     }
@@ -22,6 +32,7 @@
     .is-link {
       margin-right: 3.5rem;
     }
+
     .icon {
       width: 2.6rem;
       height: 2.6rem;
@@ -29,13 +40,32 @@
   }
 
   &__introduction {
-    &--title {
-      font-size: 4rem;
-      margin: calc(var(--padding) * 2) 0 var(--padding) 0;
-    }
-
     p {
       margin-bottom: 1em;
+      @include touch {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--first {
+      @include phone {
+        padding-right: var(--padding);
+      }
+    }
+
+    &--second {
+      @include phone {
+        padding-left: 0 !important;
+      }
+    }
+
+    &--title p {
+      font-size: 4rem;
+      margin: calc(var(--padding) * 2) 0 var(--padding) 0;
+
+      @include touch {
+        font-size: 2.4rem;
+      }
     }
   }
 
@@ -43,13 +73,30 @@
     background: var(--color-darkgrey);
     padding: 13rem 0;
 
+    @include touch {
+      padding: 10em 0;
+    }
+
     &--number {
       width: 1.5em;
+    }
+
+    &--title {
+      @include touch {
+        font-size: 4.8rem;
+      }
+      @include phone {
+        font-size: 2.4rem;
+      }
     }
 
     &--btn {
       padding: 3rem 0;
       border-bottom: 0.1rem solid rgba(#fff, 0.3);
+
+      @include phone {
+        padding: 2rem 0;
+      }
     }
 
     &--content {
@@ -65,10 +112,20 @@
   &__conclusion {
     &--content {
       margin: 15rem 0;
+      @include touch {
+        margin: 10em 0;
+      }
     }
 
     &--link {
       margin-top: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include phone {
+        font-size: 2.4rem;
+        width: 24rem;
+      }
     }
   }
 }

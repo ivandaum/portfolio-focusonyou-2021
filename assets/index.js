@@ -6,7 +6,7 @@ import Highway from '@dogstudio/highway'
 import store from './scripts/utils/store'
 
 // import ScrollManager from './utils/ScrollManager'
-// import ResizeManager from './utils/ResizeManager'
+import ResizeManager from './scripts/utils/ResizeManager'
 
 import DefaultRenderer from './scripts/renderer/DefaultRenderer'
 import DefaultTransition from './scripts/transitions/DefaultTransition'
@@ -38,7 +38,10 @@ new Highway.Core({ renderers, transitions })
       })
     }
   })
-  .on('NAVIGATE_IN', ({ location }) => {})
+  .on('NAVIGATE_IN', ({ to }) => {
+    const page = to.view.dataset.routerView
+    document.body.dataset.page = page
+  })
   .on('NAVIGATE_ERROR', ({ location }) => {
     window.location.href = location.href
   })
@@ -48,11 +51,8 @@ function app() {
 
   store.init()
   // ScrollManager.init({ $view })
-  // ResizeManager.init()
-
-  // if (breakpoints.isDesktop()) {
-  //   ResizeManager.addQueue(() => store.setGlobalVars())
-  // }
+  ResizeManager.init()
+  ResizeManager.addQueue(() => store.setGlobalVars())
 
   // store.updateBody($view)
 

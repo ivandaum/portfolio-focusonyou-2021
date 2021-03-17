@@ -23,7 +23,7 @@ return function ($page, $site) {
   $conclusion = (object) array(
     'supText' => $page->conclusionSubtitle(),
     'wording' => $page->conclusionBtn(),
-    'url' => $page->conclusionPage()->url(),
+    'url' => $page->conclusionPage()->toPage()->url(),
   );
 
   return array(

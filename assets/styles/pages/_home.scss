@@ -1,10 +1,16 @@
 .Home {
   &__menu {
-    bottom: 0;
+    bottom: calc(var(--padding) * 2);
+    left: 0;
+    right: 0;
     z-index: zindex(section);
 
     &--item {
       padding-right: 1em;
+
+      @include phone {
+        padding-top: 1em;
+      }
     }
 
     &--link {
@@ -28,8 +34,10 @@
   &__background {
     z-index: zindex(base);
 
-    &--item picture {
+    picture,
+    img {
       @include object-fit;
+      padding-top: 0 !important;
     }
   }
 }

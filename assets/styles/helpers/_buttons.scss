@@ -10,7 +10,11 @@
     height: 0.2rem;
     position: absolute;
     left: 0;
-    bottom: 0.1rem;
+    bottom: 0rem;
+
+    @include phone {
+      height: 0.1rem;
+    }
   }
 }
 
@@ -21,4 +25,20 @@
   border: 0.2rem solid var(--color-white);
   bottom: 0;
   right: 0;
+
+  @include touch {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  @include phone {
+    border-width: 0.1rem;
+    width: 2.6rem;
+    height: 2.6rem;
+
+    img {
+      max-width: 60%;
+      height: auto;
+    }
+  }
 }

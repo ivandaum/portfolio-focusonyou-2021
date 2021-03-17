@@ -17,12 +17,12 @@
     <?php endif; ?>
   </div>
 
-  <div class="About__introduction is-flex container">
-    <div class="is-column is-6 has-pr-1">
+  <div class="About__introduction is-flex is-wrap container">
+    <div class="About__introduction--first is-column is-6 is-12-phone has-pr-1">
       <h2 class="About__introduction--title"><?= $introduction->intro ?></h2>
       <div class="has-fontsize-32 has-color-lightgrey"><?= $introduction->text ?></div>
     </div>
-    <div class="is-column is-6 has-pl-1">
+    <div class="About__introduction--second is-column is-6 is-12-phone has-pl-1">
       <?php foreach($introduction->pictures as $picture): ?>
         <?= Image::thumb($picture); ?>
       <?php endforeach; ?>
@@ -36,14 +36,14 @@
       <?php foreach($services->content as $i => $service): ?>
         <li class="has-width-100">
           <button class="About__services--btn is-relative has-width-100 is-flex is-baseline is-justified-x">
-            <div class="is-flex is-baseline">
+            <div class="is-flex is-baseline is-left-x">
               <span class="About__services--number has-fontsize-24 has-text-left has-color-grey"><?= $i+1 ?>.</span>
-              <h3 class="has-fontsize-64"><?= $service->title() ?></h3>
+              <h3 class="About__services--title has-fontsize-64"><?= $service->title() ?></h3>
             </div>
             <img src="/assets/images/arrow.svg" />
           </button>
           <div class="About__services--content">
-            <div class="About__services--text has-fontsize-24 is-column is-6">
+            <div class="About__services--text has-fontsize-24 is-column is-6 is-8-touch is-12-phone">
               <?= $service->description() ?>
             </div>
           </div>
@@ -61,6 +61,9 @@
         <span class="icon is-flex is-center is-absolute"><img src="/assets/images/arrow-right.svg" /></span>
       </a>
     </div>
+  </div>
+  <div class="container">
+    <?php snippet('footer-menu') ?>
   </div>
 </div>
 <?php snippet('footer') ?>
