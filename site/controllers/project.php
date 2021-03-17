@@ -3,8 +3,8 @@
 return function ($page, $site) {
   $title = $page->title();
   $cover = $page->cover();
-  $description = $page->description();
-  $conclusion = $page->conclusion();
+  $description = $page->description()->kirbyText();
+  $conclusion = $page->conclusion()->kirbyText();
   $youtube = $page->youtube();
   $releaseDate = $page->releaseDate();
   $cover = $page->cover();

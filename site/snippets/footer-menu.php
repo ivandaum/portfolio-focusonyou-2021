@@ -4,7 +4,7 @@
 
     <ul class="is-flex is-column is-wrap">
     <?php foreach($site->pages()->listed() as $page): ?>
-      <li class="is-column is-5-phone"><a href="<?= $page->url() ?>"><?= $page->title() ?></a></li>
+      <li class="is-column is-3-phone"><a href="<?= $page->url() ?>"><?= $page->title() ?></a></li>
     <?php endforeach; ?>
     </ul>
   </div>

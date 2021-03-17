@@ -3,6 +3,7 @@
 
   @include phone {
     font-size: 1.4rem;
+    margin-top: var(--padding);
   }
 
   &__content {
@@ -26,7 +27,7 @@
 
   ul {
     @include phone {
-      margin-top: var(--padding);
+      margin-bottom: var(--padding);
     }
   }
 }
