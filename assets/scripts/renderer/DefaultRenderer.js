@@ -1,15 +1,15 @@
 import Highway from '@dogstudio/highway'
-import ImagesLoader from '../utils/ImagesLoader'
+import Images from '../binders/Images'
 
 class DefaultRenderer extends Highway.Renderer {
   onLeaveCompleted() {}
 
   onLeave() {
-    ImagesLoader.lazy.destroy()
+    Images.lazy.destroy()
   }
 
   onEnterCompleted() {
-    ImagesLoader.lazyload()
+    Images.lazyload()
   }
 }
 

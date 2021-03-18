@@ -11,6 +11,7 @@ import ResizeManager from './scripts/utils/ResizeManager'
 
 import DefaultRenderer from './scripts/renderer/DefaultRenderer'
 import GaleryRenderer from './scripts/renderer/GaleryRenderer'
+import ProjectRenderer from './scripts/renderer/ProjectRenderer'
 import DefaultTransition from './scripts/transitions/DefaultTransition'
 
 const renderers = {
@@ -18,7 +19,7 @@ const renderers = {
   contact: DefaultRenderer,
   projects: DefaultRenderer,
   about: DefaultRenderer,
-  project: DefaultRenderer,
+  project: ProjectRenderer,
   galery: GaleryRenderer,
 }
 

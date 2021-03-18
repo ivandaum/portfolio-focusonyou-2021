@@ -18,7 +18,6 @@ class DefaultTransition extends Highway.Transition {
       translateY: ['5rem', 0],
       complete: () => {
         document.body.classList.remove('is-loading-end')
-        done()
       },
     })
   }

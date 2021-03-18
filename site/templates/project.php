@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<div class="Project" data-router-view="projects">
+<div class="Project" data-router-view="project">
   <div class="container">
     <div class="Project__video has-width-100">
         <?php if(!$youtube): ?>
@@ -22,15 +22,20 @@
       <?php endforeach; ?>
     </ul>
     <div class="has-fontsize-24 has-color-grey is-column is-8 is-10-touch is-12-phone"><?= $conclusion ?></div>
+    <?php if($hasGalery): ?>
     <h2 class="Project__galery--title has-fontsize-48">Galerie</h2>
     <div class="is-flex is-wrap">
       <?php foreach($galery as $picture): ?>
-        <div class="Galery__picture no-shrink has-height-100 is-relative is-column is-3 is-4-touch is-6-phone">
+        <div data-slug="<?= Image::getUniqueId($picture) ?>" class="Galery__picture js-picture no-shrink has-height-100 is-relative is-column is-3 is-4-touch is-6-phone">
           <?= Image::thumb($picture); ?>
         </div>
       <?php endforeach; ?>
     </div>
+    <?php endif; ?>
+    <h2 class="Project__galery--title has-fontsize-48">Autres<br/>projets</h2>
+    <div class="is-flex is-wrap">
 
+    </div>
     <?php snippet('footer-menu'); ?>
   </div>
 </div>

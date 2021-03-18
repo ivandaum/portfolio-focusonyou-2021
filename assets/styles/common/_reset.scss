@@ -396,14 +396,20 @@ blockquote {
   outline: none;
 }
 
-picture img {
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
 picture {
   overflow: hidden;
   transform-origin: center center;
   position: relative;
+
+  img {
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity var(--speed) var(--bezier-in-out);
+  }
+
+  img.loaded {
+    opacity: 1;
+  }
 }

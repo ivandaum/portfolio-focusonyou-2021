@@ -9,10 +9,11 @@ return function ($page, $site) {
   $releaseDate = $page->releaseDate();
   $cover = $page->cover();
   $galery = $page->galery()->toFiles();
-
+  
   $list = array('category','artist','client','realisator','productor');
   $specs = array();
 
+  $others = $page->siblings()->shuffle();
   foreach($list as $entry) {
     $specs[] = (object) array(
         'title' => t($entry),
@@ -35,6 +36,8 @@ return function ($page, $site) {
     'description' => $description,
     'specs' => $specs,
     'galery' => $galery,
-    'cover' => $cover
+    'cover' => $cover,
+    'hasGalery' => $galery->count() > 0,
+    'others' => $others
   );
 };

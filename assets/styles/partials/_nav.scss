@@ -4,6 +4,7 @@
   left: 0;
   right: 0;
   z-index: zindex(nav);
+  height: 0;
 
   @include phone {
     font-size: 1.4rem;
