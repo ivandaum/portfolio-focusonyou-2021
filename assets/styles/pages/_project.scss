@@ -2,7 +2,7 @@
   margin-top: 19.2rem;
 
   &__title {
-    margin: calc(var(--padding) * 2) 0 1.5rem;
+    margin: calc(var(--padding) * 2) 0 var(--padding);
   }
   &__specs {
     margin: calc(var(--padding) * 2) 0 var(--padding);
@@ -24,8 +24,29 @@
     }
   }
 
-  &__galery--title {
-    margin-top: calc(var(--padding) * 2);
-    margin-bottom: var(--padding);
+  &__projects {
+    margin: 0 calc(-0.25 * var(--padding));
+
+    &--item {
+      padding: 0 calc(0.25 * var(--padding));
+      margin-bottom: var(--padding);
+    }
+
+    a {
+      height: 30vw;
+
+      @include phone {
+        height: 40vh;
+      }
+    }
+    picture {
+      opacity: 0.6;
+    }
+
+    picture,
+    picture img {
+      @include object-fit;
+      padding-top: 0 !important;
+    }
   }
 }

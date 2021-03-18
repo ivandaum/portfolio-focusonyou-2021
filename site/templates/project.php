@@ -23,18 +23,37 @@
     </ul>
     <div class="has-fontsize-24 has-color-grey is-column is-8 is-10-touch is-12-phone"><?= $conclusion ?></div>
     <?php if($hasGalery): ?>
-    <h2 class="Project__galery--title has-fontsize-48">Galerie</h2>
+    <h2 class="Project__title has-fontsize-48">Galerie</h2>
     <div class="is-flex is-wrap">
       <?php foreach($galery as $picture): ?>
-        <div data-slug="<?= Image::getUniqueId($picture) ?>" class="Galery__picture js-picture no-shrink has-height-100 is-relative is-column is-3 is-4-touch is-6-phone">
+        <div data-slug="<?= Image::getUniqueId($picture) ?>" class="Galery__picture js-picture no-shrink has-height-100 is-relative is-column is-3 is-4-touch is-12-phone">
           <?= Image::thumb($picture); ?>
         </div>
       <?php endforeach; ?>
     </div>
     <?php endif; ?>
-    <h2 class="Project__galery--title has-fontsize-48">Autres<br/>projets</h2>
-    <div class="is-flex is-wrap">
-
+    <h2 class="Project__title has-fontsize-48">Autres<br/>projets</h2>
+    <div class="Project__projects is-flex is-wrap">
+      <?php $i = 0; ?>
+      <?php foreach($others as $project): ?>
+        <?php if ($page->id() !== $project->id()): ?>
+          <div class=" is-relative is-column is-4 is-12-phone">
+            <div class="Project__projects--item is-relative">
+              <a class="is-flex has-width-100 has-height-100" href="<?= $project->url() ?>">
+                <div class="Projects__info is-absolute is-column">
+                  <p class="has-color-grey"><?= $project->category() ?></p>
+                  <h3 class="has-fontsize-32"><?= $project->title() ?></h3>
+                </div>
+                <?= Image::create($project->cover()) ?>
+              </a>
+            </div>
+          </div>
+          <?php 
+            $i++;
+            if($i >= 3) break;
+          ?>
+        <?php endif; ?>
+      <?php endforeach; ?>
     </div>
     <?php snippet('footer-menu'); ?>
   </div>

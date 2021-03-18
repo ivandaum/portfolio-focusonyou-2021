@@ -67,23 +67,23 @@
     }
 
     &.has-mr-#{$i} {
-      margin-right: $v;
+      margin-right: calc(var(--padding) * #{$i});
     }
 
     &.has-mb-#{$i} {
-      margin-bottom: $v;
+      margin-bottom: calc(var(--padding) * #{$i});
     }
 
     &.has-ml-#{$i} {
-      margin-left: $v;
+      margin-left: calc(var(--padding) * #{$i});
     }
 
     &.has-pr-#{$i} {
-      padding-right: $v;
+      padding-right: calc(var(--padding) * #{$i});
     }
 
     &.has-pl-#{$i} {
-      padding-left: $v;
+      padding-left: calc(var(--padding) * #{$i});
     }
   }
 }

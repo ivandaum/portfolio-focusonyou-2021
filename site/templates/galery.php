@@ -15,7 +15,7 @@
           $currentDate = date('m/Y', $picture->exif()->timestamp());
           $currentProject = $picture->page()->title();
         ?>
-        <div data-slug="<?= Image::getUniqueId($picture) ?>" class="Galery__picture js-picture no-shrink has-height-100 is-relative is-column is-3 is-4-touch is-6-phone">
+        <div data-slug="<?= Image::getUniqueId($picture) ?>" class="Galery__picture js-picture no-shrink has-height-100 is-relative is-column is-3 is-4-touch is-12-phone">
           <?php if($isProject): ?>
             <a href="<?= $picture->page()->url() ?>" class="is-block">
           <?php endif; ?>

@@ -43,7 +43,7 @@
     </ul>
     <div class="Nav__categories js-navbar-categories is-column is-7 is-12-phone is-flex is-wrap is-right-x">
     <?php foreach($columns as $column): ?>
-      <div class="is-column is-4 is-6-touch">
+      <div class="is-column is-4 is-12-touch">
       <?php foreach($column as $category): ?>
         <ul>
           <li class="has-color-grey is-block"><?= $category['title'] ?></li>

@@ -63,7 +63,7 @@ class Image {
     }
 
     public static function thumb($image, $sizes = array('1024', '768', '360')) {
-        return self::create($image, $sizes);
+      return self::create($image, $sizes);
     }
 
     public static function getUniqueId($image) {

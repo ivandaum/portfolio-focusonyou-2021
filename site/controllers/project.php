@@ -14,6 +14,7 @@ return function ($page, $site) {
   $specs = array();
 
   $others = $page->siblings()->shuffle();
+
   foreach($list as $entry) {
     $specs[] = (object) array(
         'title' => t($entry),
@@ -24,8 +25,8 @@ return function ($page, $site) {
   $otherSpecs = $page->others()->toBuilderBlocks();
   foreach($otherSpecs as $spec) {
       $specs[] = (object) array(
-          'title' => $spec->title(),
-          'value' => $spec->text(),
+        'title' => $spec->title(),
+        'value' => $spec->text(),
       );
   }
 
