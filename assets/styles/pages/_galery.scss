@@ -7,13 +7,13 @@
   &__picture {
     margin-bottom: var(--padding);
     padding: 0 calc(0.25 * var(--padding));
+    transform: translateY(0.4em) scaleY(1.4);
+    opacity: 0;
+    transition: opacity var(--speed) var(--bezier-in-out), transform var(--speed) var(--bezier-in-out);
+    transform-origin: top center;
 
     &--info {
-      padding: 0 0 calc(0.5 * var(--padding)) calc(0.5 * var(--padding));
-      z-index: zindex(section);
-      bottom: 0;
-      opacity: 0;
-      transition: opacity var(--speed) var(--bezier-in-out);
+      padding: calc(0.25 * var(--padding)) 0;
     }
 
     &--date {
@@ -25,19 +25,9 @@
       font-size: 1.4rem;
     }
 
-    picture {
-      z-index: zindex(base);
-      transition: opacity var(--speed) var(--bezier-in-out);
-    }
-
-    &:hover {
-      .Galery__picture--info {
-        opacity: 1;
-      }
-
-      picture {
-        opacity: 0.25;
-      }
+    &.visible {
+      transform: translateY(0) scaleY(1);
+      opacity: 1;
     }
   }
 }

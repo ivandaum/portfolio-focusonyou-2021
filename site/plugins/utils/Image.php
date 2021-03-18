@@ -65,4 +65,18 @@ class Image {
     public static function thumb($image, $sizes = array('1024', '768', '360')) {
         return self::create($image, $sizes);
     }
+
+    public static function getUniqueId($image) {
+      if (!$image) return false;
+
+        if(is_string($image->name())) {
+            $file = $image;
+        } else {
+            $file = $image->toFile();
+        }
+
+        if (!$file) return false;
+
+        return $file->name() . time();
+    }
 }

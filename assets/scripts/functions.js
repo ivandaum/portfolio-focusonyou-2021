@@ -14,3 +14,11 @@ export function getMousePosition(e) {
 
   return { x, y }
 }
+
+export const observe = (target, callback, options = {}) => {
+  const observer = new IntersectionObserver((changes) => {
+    const [{ isIntersecting }] = changes
+    callback(isIntersecting)
+  }, options)
+  observer.observe(target)
+}

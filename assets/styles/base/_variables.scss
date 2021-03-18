@@ -1,9 +1,11 @@
 $zIndex: (
+  loader: 100,
   nav: 90,
   under-nav: 89,
   above-section: 11,
   section: 10,
-  base: 1,
+  base: 2,
+  underbase: 1,
 );
 
 $fontWeight: (

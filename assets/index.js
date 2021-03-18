@@ -4,11 +4,13 @@ import './scripts/vendor/IntersectionObserver'
 
 import Highway from '@dogstudio/highway'
 import store from './scripts/utils/store'
+import Navbar from './scripts/nav/Navbar'
 
 // import ScrollManager from './utils/ScrollManager'
 import ResizeManager from './scripts/utils/ResizeManager'
 
 import DefaultRenderer from './scripts/renderer/DefaultRenderer'
+import GaleryRenderer from './scripts/renderer/GaleryRenderer'
 import DefaultTransition from './scripts/transitions/DefaultTransition'
 
 const renderers = {
@@ -17,7 +19,7 @@ const renderers = {
   projects: DefaultRenderer,
   about: DefaultRenderer,
   project: DefaultRenderer,
-  galery: DefaultRenderer,
+  galery: GaleryRenderer,
 }
 
 const transitions = {
@@ -56,7 +58,10 @@ function app() {
 
   // store.updateBody($view)
 
-  // Navbar.init(document.querySelector('.js-navbar'), $view)
+  const btn = document.querySelector('.js-navbar-btn')
+  const content = document.querySelector('.js-navbar-content')
+
+  Navbar.init({ btn, content })
   //     Nav.bindActiveLink({ color: $view.dataset.color })
   //     Nav.updateLoader({ color: $view.dataset.loader, firstLoading: true })
   //     setTimeout(() => Nav.show(), 500)

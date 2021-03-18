@@ -30,14 +30,34 @@ body {
   }
 }
 
-.App {
-  height: vh(100);
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 .container {
   max-width: 144rem;
   margin: 0 auto;
   padding: 0 var(--padding);
+}
+
+.App {
+  height: vh(100);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transform-origin: top center;
+  transition: transform var(--speed) var(--bezier-in-out);
+}
+
+body.menuIsOpen .App {
+  transform: translateY(5vh);
+}
+
+[data-router-view] {
+  z-index: zindex(base);
+  background: var(--color-black);
+  position: relative;
+}
+
+.is-view-leaving {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: zindex(underbase);
 }

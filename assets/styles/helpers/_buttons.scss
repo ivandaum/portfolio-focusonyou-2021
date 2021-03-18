@@ -18,6 +18,30 @@
   }
 }
 
+.is-link-hover {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: '';
+    background: var(--color-white);
+    width: 0;
+    height: 0.1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0rem;
+    transition: width var(--speed) var(--bezier-in-out);
+
+    @include phone {
+      display: none;
+    }
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
 .icon {
   border-radius: 50%;
   height: 4rem;

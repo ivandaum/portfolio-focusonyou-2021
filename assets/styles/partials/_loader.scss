@@ -1,0 +1,19 @@
+.Loader {
+  left: 0;
+  z-index: zindex(loader);
+  background: var(--color-darkgrey);
+  height: 0;
+  will-change: height;
+  transform-origin: top center;
+  transition: height calc(var(--speed) * 1.5) var(--bezier-in-out);
+}
+
+body.is-loading .Loader {
+  height: 100%;
+  bottom: 0;
+}
+
+body.is-loading-end .Loader {
+  height: 0;
+  top: 0;
+}

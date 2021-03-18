@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
-<div class="Projects container" data-router-view="projects">
-  <div class="is-column has-width-100">
+<div class="Projects" data-router-view="projects">
+  <div class="has-width-100 container">
     <h1 class="is-main-title"><?= $title ?></h1>
     <div class="has-fontsize-24 has-color-grey"><?= $subtitle ?></div>
 
@@ -19,7 +19,7 @@
         </div>
       <?php endforeach; ?>
     </div>
+    <?php snippet('footer-menu') ?>
   </div>
-  <?php snippet('footer-menu') ?>
 </div>
 <?php snippet('footer') ?>

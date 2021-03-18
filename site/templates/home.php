@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<div class="Home is-relative has-height-100" data-router-view="home">
+<div class="Home has-height-100" data-router-view="home">
   <ul class="Home__menu container is-absolute is-flex is-right-y has-width-100 is-wrap">
   <?php $i = 0; ?>
   <?php foreach($projects as $project): ?>

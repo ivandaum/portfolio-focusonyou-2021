@@ -40,5 +40,6 @@
     <?php endif; ?>
 </head>
 <body class="is-first-load">
+  <div class="Loader has-width-100 is-fixed"></div>
   <?php snippet('nav'); ?>
   <main class="App has-width-100 is-relative" data-router-wrapper>
