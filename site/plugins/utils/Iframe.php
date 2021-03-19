@@ -4,6 +4,7 @@ class Iframe {
   static public function youtube($url) {
     $path = explode('/', $url);
     $last = $path[count($path) - 1];
-    return "https://www.youtube.com/embed/$last";
+
+    return "<iframe width='100%' src='https://www.youtube.com/embed/$last' frameborder='0' allowfullscreen></iframe>";
   }
 }

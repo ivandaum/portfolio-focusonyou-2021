@@ -1,10 +1,10 @@
 <?php snippet('header') ?>
 <div class="Projects" data-router-view="projects">
   <div class="has-width-100 container">
-    <h1 class="is-main-title"><?= $title ?></h1>
-    <div class="has-fontsize-24 has-color-grey"><?= $subtitle ?></div>
+    <h1 class="is-main-title js-main-title"><?= $title ?></h1>
+    <div class="has-fontsize-24 has-color-grey js-sub-title"><?= $subtitle ?></div>
 
-    <div class="Projects__content is-flex is-wrap">
+    <div class="Projects__content is-flex is-wrap js-content">
       <?php foreach($columns as $projects): ?>
         <div class="is-column is-<?= 12 / count($columns) ?> is-12-touch">
           <?php foreach($projects as $project): ?>

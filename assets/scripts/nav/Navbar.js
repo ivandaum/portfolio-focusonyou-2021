@@ -25,6 +25,22 @@ const Navbar = {
     this.$links.forEach((link) => link.addEventListener('click', () => this.close()))
   },
 
+  update({ location }) {
+    const href = location.href
+
+    const isActive = 'is-active'
+
+    this.$links.forEach((link) => {
+      if (link.classList.contains(isActive)) {
+        link.classList.remove(isActive)
+      }
+
+      if (link.href === href) {
+        link.classList.add(isActive)
+      }
+    })
+  },
+
   toggleMenu() {
     if (document.body.classList.contains(menuIsOpen)) {
       this.close()

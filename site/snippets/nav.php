@@ -37,8 +37,12 @@
 <div class="Nav__content has-width-100 is-fixed has-height-100 js-navbar-content">
   <div class="Nav__scroller container has-width-100 is-flex is-center-y is-wrap">
     <ul class="Nav__menu js-navbar-menu is-column has-mr-1 is-4 is-12-phone">
-    <?php foreach($site->pages()->listed() as $page): ?>
-      <li class="is-block"><a class="is-link-hover" href="<?= $page->url() ?>"><?= $page->title() ?></a></li>
+    <?php foreach($site->pages()->listed() as $p): ?>
+      <li class="is-block">
+        <a 
+          class="is-link-hover <?php if($p->url() === $page->url()): ?>is-active<?php endif; ?>"
+          href="<?= $p->url() ?>"><?= $p->title() ?></a>
+      </li>
     <?php endforeach; ?>
     </ul>
     <div class="Nav__categories js-navbar-categories is-column is-7 is-12-phone is-flex is-wrap is-right-x">
@@ -48,7 +52,7 @@
         <ul>
           <li class="has-color-grey is-block"><?= $category['title'] ?></li>
           <?php foreach($category['projects'] as $project): ?>
-          <li class="has-fontsize-20 is-block"><a class="is-link-hover" href="<?= $project->url() ?>"><?= $project->title() ?></a></li>
+          <li class="has-fontsize-20 is-block"><a class="is-link-hover <?php if($project->url() === $page->url()): ?>is-active<?php endif; ?>" href="<?= $project->url() ?>"><?= $project->title() ?></a></li>
           <?php endforeach; ?>
         </ul>
       <?php endforeach; ?>

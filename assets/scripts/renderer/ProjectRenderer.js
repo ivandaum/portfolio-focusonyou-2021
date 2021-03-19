@@ -4,7 +4,7 @@ import Observer from '../binders/Observer'
 import Iframes from '../binders/Iframes'
 import ResizeManager from '../utils/ResizeManager'
 
-class DefaultRenderer extends Highway.Renderer {
+export default class extends Highway.Renderer {
   onLeaveCompleted() {}
 
   onLeave() {
@@ -29,5 +29,3 @@ class DefaultRenderer extends Highway.Renderer {
     Iframes.bind(this.$iframes)
   }
 }
-
-export default DefaultRenderer

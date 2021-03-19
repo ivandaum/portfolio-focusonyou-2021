@@ -1,10 +1,10 @@
 <?php snippet('header') ?>
 <div class="Galery" data-router-view="galery">
   <div class="container">
-    <h1 class="is-main-title"><?= $title ?></h1>
-    <div class="has-fontsize-24 has-color-grey"><?= $subtitle ?></div>
+    <h1 class="is-main-title js-main-title"><?= $title ?></h1>
+    <div class="has-fontsize-24 has-color-grey js-sub-title"><?= $subtitle ?></div>
 
-    <div class="Galery__content is-flex is-wrap">
+    <div class="Galery__content is-flex is-wrap js-content">
       <?php 
         $lastDate = null; 
         $lastProject = null; 

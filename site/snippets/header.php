@@ -42,4 +42,5 @@
 <body class="is-first-load">
   <div class="Loader has-width-100 is-fixed"></div>
   <?php snippet('nav'); ?>
-  <main class="App has-width-100 is-relative" data-router-wrapper>
+  <main class="App js-app has-width-100 is-relative">
+    <div class="js-scroller has-width-100 has-height-100 is-relative" data-router-wrapper>

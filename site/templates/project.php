@@ -1,11 +1,11 @@
 <?php snippet('header') ?>
 <div class="Project" data-router-view="project">
-  <div class="container">
+  <div class="container js-content">
     <div class="Project__video has-width-100">
         <?php if(!$youtube): ?>
           <?= Image::create($cover); ?>
         <?php else: ?>
-          <iframe width="100%" src="<?= Iframe::youtube($youtube) ?>" frameborder="0" allowfullscreen></iframe>
+          <?= Iframe::youtube($youtube); ?>
         <?php endif; ?>
     </div>
 

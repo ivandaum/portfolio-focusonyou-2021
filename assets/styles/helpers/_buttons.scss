@@ -40,6 +40,10 @@
   &:hover::after {
     width: 100%;
   }
+
+  &.is-active::after {
+    width: 100%;
+  }
 }
 
 .icon {
