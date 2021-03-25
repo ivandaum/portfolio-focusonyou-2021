@@ -19,13 +19,6 @@ class DefaultTransition extends Highway.Transition {
       complete: () => document.body.classList.remove('is-loading-end'),
     })
 
-    if (from) {
-      timeline.add({
-        targets: to,
-        translateY: ['5rem', 0],
-      })
-    }
-
     const titles = to.querySelectorAll('.js-main-title p, .js-sub-title')
     const content = to.querySelector('.js-content')
 

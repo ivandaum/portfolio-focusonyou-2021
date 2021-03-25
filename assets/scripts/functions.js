@@ -22,3 +22,7 @@ export const observe = (target, callback, options = {}) => {
   }, options)
   observer.observe(target)
 }
+
+export const range = (input, min, max) => ((input - min) * 100) / (max - min)
+
+export const lerp = (v0, v1, t) => (1 - t) * v0 + t * v1

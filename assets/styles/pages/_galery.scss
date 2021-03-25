@@ -20,26 +20,5 @@
       margin-top: 0.5rem;
       font-size: 1.4rem;
     }
-
-    picture {
-      background: var(--color-darkgrey);
-      transition: background var(--speed) var(--bezier-in-out);
-    }
-
-    picture img {
-      opacity: 0;
-      transform: translateY(0.4em) scaleY(1.4);
-      transition: opacity var(--speed) var(--bezier-in-out), transform var(--speed) var(--bezier-in-out);
-      transition-delay: var(--speed);
-      transform-origin: top center;
-    }
-
-    &.visible picture.loaded {
-      background: transparent;
-      img {
-        transform: translateY(0) scaleY(1);
-        opacity: 1;
-      }
-    }
   }
 }

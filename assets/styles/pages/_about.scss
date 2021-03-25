@@ -1,6 +1,7 @@
 .About {
   .is-main-title {
     margin-top: 0;
+    padding-top: 0;
 
     @include phone {
       font-size: 2.4rem;
@@ -20,6 +21,7 @@
     }
 
     picture,
+    video,
     picture img {
       @include object-fit;
       padding-top: 0 !important;
@@ -40,6 +42,9 @@
   }
 
   &__introduction {
+    @include phone {
+      overflow: hidden;
+    }
     p {
       margin-bottom: 1em;
       @include touch {
@@ -48,6 +53,8 @@
     }
 
     &--first {
+      padding: calc(var(--padding) * 4) 0;
+
       @include phone {
         padding-right: var(--padding);
       }
@@ -57,11 +64,22 @@
       @include phone {
         padding-left: 0 !important;
       }
+
+      picture {
+        @include desktop {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: calc(100% - var(--padding));
+          margin-left: var(--padding);
+          margin-top: calc(var(--padding) * 3);
+        }
+      }
     }
 
     &--title p {
       font-size: 4rem;
-      margin: calc(var(--padding) * 2) 0 var(--padding) 0;
+      margin: 0 0 var(--padding) 0;
 
       @include touch {
         font-size: 2.4rem;
@@ -71,7 +89,7 @@
 
   &__services {
     background: var(--color-darkgrey);
-    padding: 13rem 0;
+    padding: 20rem 0;
 
     @include touch {
       padding: 10em 0;
@@ -107,6 +125,15 @@
     &--text {
       padding: 1em 0;
     }
+
+    img {
+      transition: transform var(--speed) var(--bezier-in-out);
+      transform-origin: center center;
+    }
+
+    li.is-active img {
+      transform: rotate(180deg);
+    }
   }
 
   &__conclusion {
@@ -125,6 +152,21 @@
       @include phone {
         font-size: 2.4rem;
         width: 24rem;
+      }
+    }
+  }
+}
+
+body:not(.is-loading-end) {
+  .About__cover--link,
+  .About__conclusion--link {
+    transition: opacity var(--speed) var(--bezier-in-out);
+
+    &:hover {
+      opacity: 0.6 !important;
+      .is-link::after {
+        left: 100%;
+        width: 0;
       }
     }
   }

@@ -6,15 +6,20 @@
       <h1 class="is-main-title js-main-title"><?= $title ?></h1>
       <button class="About__cover--link has-fontsize-24 is-flex is-baseline is-relative js-sub-title" data-url="<?= $showreel->url ?>">
         <span class="is-relative is-link"><?= $showreel->wording ?></span>
-        <span class="icon is-flex is-center is-absolute"><img src="/assets/images/play.svg" /></span>
+        <span class="icon is-flex is-center is-absolute"><img class="ignore-lazy" src="/assets/images/play.svg" /></span>
       </button>
     </div>
 
-    <?php if($cover): ?>
-      <div class="About__cover--picture is-absolute has-width-100 has-height-100">
-        <?= Image::create($cover) ?>
-      </div>
+    <div class="About__cover--picture js-about-cover is-absolute has-width-100 has-height-100">
+      <?php if(isset($cover)): ?>
+        <?php if($cover->type() === 'image'): ?>
+          <?= Image::create($cover) ?>
+        <?php endif; ?>
+        <?php if($cover->type() === 'video'): ?>
+          <?= Video::create($cover) ?>
+        <?php endif; ?>
     <?php endif; ?>
+    </div>
   </div>
 
   <div class="About__introduction is-flex is-wrap container">
@@ -22,7 +27,7 @@
       <h2 class="About__introduction--title"><?= $introduction->intro ?></h2>
       <div class="has-fontsize-32 has-color-lightgrey"><?= $introduction->text ?></div>
     </div>
-    <div class="About__introduction--second is-column is-6 is-12-phone has-pl-1">
+    <div data-value="[-10, 50]" class="About__introduction--second js-about-introCover is-column is-6 is-12-phone has-pl-1 is-relative">
       <?php foreach($introduction->pictures as $picture): ?>
         <?= Image::thumb($picture); ?>
       <?php endforeach; ?>
@@ -34,16 +39,16 @@
       <h2 class="is-main-title"><?= $services->title ?></h2>
       <ul>
       <?php foreach($services->content as $i => $service): ?>
-        <li class="has-width-100">
-          <button class="About__services--btn is-relative has-width-100 is-flex is-baseline is-justified-x">
-            <div class="is-flex is-baseline is-left-x">
+        <li class="has-width-100 js-service-spoiler">
+          <button class="About__services--btn is-relative has-width-100 is-flex is-baseline is-justified-x js-service-spoiler--btn">
+            <div class="is-flex is-baseline ">
               <span class="About__services--number has-fontsize-24 has-text-left has-color-grey"><?= $i+1 ?>.</span>
-              <h3 class="About__services--title has-fontsize-64"><?= $service->title() ?></h3>
+              <h3 class="About__services--title has-fontsize-64 has-text-left"><?= $service->title() ?></h3>
             </div>
-            <img src="/assets/images/arrow.svg" />
+            <img class="is-block ignore-lazy" src="/assets/images/arrow.svg" />
           </button>
-          <div class="About__services--content">
-            <div class="About__services--text has-fontsize-24 is-column is-6 is-8-touch is-12-phone">
+          <div class="About__services--content js-service-spoiler--container">
+            <div class="About__services--text has-fontsize-24 is-column is-6 is-8-touch is-12-phone js-service-spoiler--content">
               <?= $service->description() ?>
             </div>
           </div>
@@ -58,7 +63,7 @@
       <div class="has-color-grey has-fontsize-24"><?= $conclusion->supText ?></div>
       <a class="About__conclusion--link is-flex is-baseline is-relative has-fontsize-48" href="<?= $conclusion->url ?>">
         <span class="is-relative is-link"><?= $conclusion->wording ?></span>
-        <span class="icon is-flex is-center is-absolute"><img src="/assets/images/arrow-right.svg" /></span>
+        <span class="icon is-flex is-center is-absolute"><img class="ignore-lazy" src="/assets/images/arrow-right.svg" /></span>
       </a>
     </div>
   </div>

@@ -401,10 +401,27 @@ picture {
   transform-origin: center center;
   position: relative;
 
+  background: var(--color-darkgrey);
+  transition: background var(--speed) var(--bezier-in-out);
+
   img {
     width: 100%;
     top: 0;
     left: 0;
-    transition: opacity var(--speed) var(--bezier-in-out);
+
+    opacity: 0;
+    transform: translateY(0.4em) scaleY(1.4);
+    transition: opacity var(--speed) var(--bezier-in-out), transform var(--speed) var(--bezier-in-out);
+    transition-delay: var(--speed);
+    transform-origin: top center;
+  }
+
+  &.loaded {
+    background: transparent;
+
+    img {
+      transform: translateY(0) scaleY(1);
+      opacity: 1;
+    }
   }
 }

@@ -17,6 +17,12 @@
   align-items: baseline;
 }
 
+.is-left {
+  &-x {
+    justify-content: flex-start;
+  }
+}
+
 .is-right {
   &-y {
     align-items: flex-end;

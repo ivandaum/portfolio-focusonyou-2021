@@ -10,6 +10,7 @@ import ScrollManager from './scripts/utils/ScrollManager'
 import ResizeManager from './scripts/utils/ResizeManager'
 
 import DefaultRenderer from './scripts/renderer/DefaultRenderer'
+import AboutRenderer from './scripts/renderer/AboutRenderer'
 import GaleryRenderer from './scripts/renderer/GaleryRenderer'
 import ProjectRenderer from './scripts/renderer/ProjectRenderer'
 import DefaultTransition from './scripts/transitions/DefaultTransition'
@@ -18,7 +19,7 @@ const renderers = {
   home: DefaultRenderer,
   contact: DefaultRenderer,
   projects: DefaultRenderer,
-  about: DefaultRenderer,
+  about: AboutRenderer,
   project: ProjectRenderer,
   galery: GaleryRenderer,
 }

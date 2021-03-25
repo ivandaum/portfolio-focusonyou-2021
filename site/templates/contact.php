@@ -16,7 +16,7 @@
         </div>
         <div class="Contact__row">
           <h2 class="has-color-lightgrey">Suivez-nous</h2>
-          <ul class="is-flex">
+          <ul class="is-flex is-wrap">
             <?php foreach($social as $s): ?>
             <li><a class="has-fontsize-32 is-relative is-link-hover" target="_blank" href="<?= $s->url() ?>"><?= $s->title() ?></a></li>
             <?php endforeach; ?>

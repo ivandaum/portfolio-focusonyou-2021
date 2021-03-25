@@ -1,9 +1,16 @@
 $breakpoints: (
   widescreen: 1600px,
+  desktop-l: 1280px,
   desktop: 1024px,
   tablet: 768px,
   phone-s: 360px,
 );
+
+@mixin desktop-l {
+  @media all and (min-width: map-get($breakpoints, desktop)) and (max-width: map-get($breakpoints, desktop-l)) {
+    @content;
+  }
+}
 
 // from 1024px up (computers)
 @mixin desktop {
@@ -11,7 +18,6 @@ $breakpoints: (
     @content;
   }
 }
-
 // from 1023px down (tablet & phone)
 @mixin touch {
   @media all and (max-width: map-get($breakpoints, desktop)) {

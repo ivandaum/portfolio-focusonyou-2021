@@ -9,8 +9,9 @@ const RafManager = {
   now: 0,
 
   addQueue(func) {
-    this.callbacks.push(func)
-    return this.callbacks.length - 1
+    const index = Date.now().toString(36) + Math.random().toString(36).substr(2)
+    this.callbacks[index] = func
+    return index
   },
 
   removeQueue(index) {
@@ -30,12 +31,13 @@ const RafManager = {
     if (this.dt > FPS_INTERVAL) {
       this.lastDate = this.now - (this.dt % FPS_INTERVAL)
 
-      this.callbacks.map((callback) => {
-        if (callback) {
-          callback(delta)
+      for (let id in this.callbacks) {
+        const cb = this.callbacks[id]
+
+        if (cb) {
+          cb(delta)
         }
-        return true
-      })
+      }
     }
   },
 
