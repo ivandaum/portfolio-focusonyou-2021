@@ -23,7 +23,7 @@
           </ul>
         </div>
       </div>
-      <div class="is-6 is-hidden-touch is-column has-pl-1">
+      <div data-value="[-15, 25]" class="is-6 is-hidden-touch is-column has-pl-1 js-contact-cover">
         <?= Image::create($cover); ?>
       </div>
     </div>

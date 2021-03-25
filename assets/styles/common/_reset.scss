@@ -410,7 +410,7 @@ picture {
     left: 0;
 
     opacity: 0;
-    transform: translateY(0.4em) scaleY(1.4);
+    transform: translateY(0.2em) scaleY(1.4);
     transition: opacity var(--speed) var(--bezier-in-out), transform var(--speed) var(--bezier-in-out);
     transition-delay: var(--speed);
     transform-origin: top center;
