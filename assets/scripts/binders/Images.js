@@ -25,7 +25,7 @@ const Images = {
   },
 
   onLoad(el) {
-    el.classList.add('loaded')
+    el.parentNode.classList.add('loaded')
   },
 }
 

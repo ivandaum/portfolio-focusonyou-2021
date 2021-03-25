@@ -57,10 +57,12 @@ class Image {
             $img = $file->resize($size);
             $html .= "<source srcset='' media='(min-width: {$size}px)' type='$mime' data-srcset='{$img->url()}' />";
         }
-        $html .= "<img alt='$title' src='{$thumb->url()}' data-src='{$img->url()}' class='is-absolute " . $imgClassname . "'/>";
+        $html .= "<img alt='$title' data-src='{$img->url()}' class='is-absolute " . $imgClassname . "'/>";
         $html .= "</picture>";
         return $html;
     }
+
+    // src='{$thumb->url()}' 
 
     public static function thumb($image, $sizes = array('1024', '768', '360')) {
       return self::create($image, $sizes);

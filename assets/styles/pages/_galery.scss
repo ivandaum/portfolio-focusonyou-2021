@@ -7,10 +7,6 @@
   &__picture {
     margin-bottom: var(--padding);
     padding: 0 calc(0.25 * var(--padding));
-    transform: translateY(0.4em) scaleY(1.4);
-    opacity: 0;
-    transition: opacity var(--speed) var(--bezier-in-out), transform var(--speed) var(--bezier-in-out);
-    transform-origin: top center;
 
     &--info {
       padding: calc(0.25 * var(--padding)) 0;
@@ -25,9 +21,25 @@
       font-size: 1.4rem;
     }
 
-    &.visible {
-      transform: translateY(0) scaleY(1);
-      opacity: 1;
+    picture {
+      background: var(--color-darkgrey);
+      transition: background var(--speed) var(--bezier-in-out);
+    }
+
+    picture img {
+      opacity: 0;
+      transform: translateY(0.4em) scaleY(1.4);
+      transition: opacity var(--speed) var(--bezier-in-out), transform var(--speed) var(--bezier-in-out);
+      transition-delay: var(--speed);
+      transform-origin: top center;
+    }
+
+    &.visible picture.loaded {
+      background: transparent;
+      img {
+        transform: translateY(0) scaleY(1);
+        opacity: 1;
+      }
     }
   }
 }
