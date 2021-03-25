@@ -8,6 +8,37 @@
     }
   }
 
+  &__showreel {
+    z-index: zindex(aboveloader);
+    pointer-events: none;
+    transition: clip-path var(--speed) var(--bezier-in-out);
+    background: var(--color-black);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+
+    .container {
+      transform: translateY(0.4em) scaleY(1.4);
+      transition: opacity var(--speed) calc(var(--speed) * 0.25) var(--bezier-in-out),
+        transform var(--speed) var(--bezier-in-out);
+      transform-origin: top center;
+      opacity: 0;
+    }
+
+    &.is-active {
+      pointer-events: auto;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+      .container {
+        transform: translateY(0) scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    button {
+      right: var(--padding);
+      top: calc(2 * var(--padding));
+    }
+  }
+
   &__cover {
     height: vh(100);
     overflow: hidden;

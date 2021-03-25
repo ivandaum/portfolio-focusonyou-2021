@@ -5,6 +5,7 @@
   right: 0;
   z-index: zindex(nav);
   height: 0;
+  transition: opacity var(--speed) var(--bezier-in-out);
 
   @include phone {
     font-size: 1.4rem;
@@ -132,4 +133,9 @@ body.menuIsOpen {
   .Nav__btn p {
     transform: translateY(-1.25em);
   }
+}
+
+body.showreel-open .Nav {
+  opacity: 0;
+  pointer-events: none;
 }

@@ -5,8 +5,9 @@ export default {
   },
 
   addQueue(func) {
-    this.functions.push(func)
-    return this.functions.length - 1
+    const index = Date.now().toString(36) + Math.random().toString(36).substr(2)
+    this.functions[index] = func
+    return index
   },
 
   removeQueue(index) {
