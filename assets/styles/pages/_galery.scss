@@ -21,4 +21,13 @@
       font-size: 1.4rem;
     }
   }
+
+  a {
+    opacity: 1;
+    transition: opacity var(--speed) var(--bezier-in-out);
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }

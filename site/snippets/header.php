@@ -21,11 +21,11 @@
     <meta property="og:image" content="<?= $seo->image ?>" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= asset('dist/images/favico/') ?>apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= asset('dist/images/favico/') ?>favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= asset('dist/images/favico/') ?>favicon-16x16.png">
-    <link rel="manifest" href="<?= asset('dist/images/favico/') ?>site.webmanifest">
-    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/dist/favicon/site.webmanifest">
     <link href="<?= asset('dist/index.css') ?>" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <?php if($seo->ga): ?>

@@ -10,6 +10,7 @@ import ScrollManager from './scripts/utils/ScrollManager'
 import ResizeManager from './scripts/utils/ResizeManager'
 
 import DefaultRenderer from './scripts/renderer/DefaultRenderer'
+import HomeRenderer from './scripts/renderer/HomeRenderer'
 import ContactRenderer from './scripts/renderer/ContactRenderer'
 import AboutRenderer from './scripts/renderer/AboutRenderer'
 import GaleryRenderer from './scripts/renderer/GaleryRenderer'
@@ -17,7 +18,7 @@ import ProjectRenderer from './scripts/renderer/ProjectRenderer'
 import DefaultTransition from './scripts/transitions/DefaultTransition'
 
 const renderers = {
-  home: DefaultRenderer,
+  home: HomeRenderer,
   contact: ContactRenderer,
   projects: DefaultRenderer,
   about: AboutRenderer,
@@ -83,10 +84,10 @@ function app() {
   //     })
   //     const page = $view.dataset.routerView
   //     document.body.dataset.page = page
-  //     const style = 'background-color:black; padding:5px; color:white;'
-  //     console.log('%cCode by Ivan Daum', style)
-  //     console.log('%c→ https://ivandaum.fr', style)
-  //     console.log('%c→ https://twitter.com/ivandaum', style)
+  const style = 'background-color:black; padding:5px; color:white;'
+  console.log('%cCode by Ivan Daum', style)
+  console.log('%c→ https://ivandaum.dev', style)
+  console.log('%c→ https://twitter.com/ivandaum', style)
   document.body.classList.remove('is-first-load')
 }
 

@@ -27,7 +27,7 @@
 ?>
 
 <div class="Nav container has-width-100 is-flex is-justified-x is-fixed">
-    <a href="<?= $site->url() ?>">Logo</a>
+    <a class="Nav__logo" href="<?= $site->url() ?>"><img class="ignore-lazy is-block" src="/assets/images/logo.png" alt="Logo"></a>
     <button class="Nav__btn js-navbar-btn is-flex is-wrap is-right-x">
       <p class="is-center-y is-flex">Menu <span class="is-block Nav__iconOpen is-flex is-wrap is-center-y is-relative"></span></p>
       <p class="is-center-y is-flex">Fermer <span class="is-block Nav__iconClose is-flex is-wrap is-center-y is-relative"></span></p>

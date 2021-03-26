@@ -3,27 +3,41 @@
     bottom: calc(var(--padding) * 2);
     left: 0;
     right: 0;
-    z-index: zindex(section);
+    z-index: zindex(above-section);
 
     &--item {
       padding-right: 1em;
+      transition: opacity var(--speed) var(--bezier-in-out);
 
       @include phone {
         padding-top: 1em;
+        margin-top: 3em;
+      }
+
+      &.is-faded {
+        opacity: 0.3;
       }
     }
 
     &--link {
-      padding-bottom: 1.25em;
-      border-bottom: 0.2rem solid rgba(#fff, 0.4);
+      &::after {
+        content: '';
+        background: rgba(#fff, 0.4);
+        height: 0.2rem;
+        position: absolute;
+        left: 0;
+        bottom: -1.25em;
+        transition: width var(--speed) var(--bezier-in-out);
+        width: 0;
+      }
     }
 
     &--border {
       background: var(--color-white);
       height: 0.2rem;
-      bottom: -0.2rem;
+      bottom: -1.25em;
       position: absolute;
-      width: 50%;
+      width: 0;
     }
 
     &--title {
@@ -38,6 +52,33 @@
     img {
       @include object-fit;
       padding-top: 0 !important;
+      transform: translateY(0) scaleY(1);
     }
+
+    &--item {
+      pointer-events: none;
+      z-index: zindex(underbase);
+    }
+
+    picture {
+      opacity: 0;
+      will-change: opacity;
+      transition: opacity var(--speed) var(--bezier-in-out);
+    }
+  }
+}
+
+.Home__menu--item.is-active {
+  .Home__menu--link::after {
+    width: 100%;
+  }
+}
+
+.Home__background--item.is-active {
+  pointer-events: auto;
+  z-index: zindex(base);
+
+  picture {
+    opacity: 1;
   }
 }

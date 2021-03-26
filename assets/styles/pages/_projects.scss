@@ -27,6 +27,15 @@
     }
   }
 
+  &__item {
+    opacity: 1;
+    transition: opacity var(--speed) var(--bezier-in-out);
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
   .item {
     &-1 {
       padding-top: 120%;
