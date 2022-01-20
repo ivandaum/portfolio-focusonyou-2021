@@ -47,13 +47,13 @@
       <ul>
       <?php foreach($services->content as $i => $service): ?>
         <li class="has-width-100 js-service-spoiler">
-          <button class="About__services--btn is-relative has-width-100 is-flex is-baseline is-justified-x js-service-spoiler--btn">
+          <h3 class="About__services--btn is-relative has-width-100 is-flex is-baseline is-justified-x js-service-spoiler--btn">
             <div class="is-flex is-baseline ">
               <span class="About__services--number has-fontsize-24 has-text-left has-color-grey"><?= $i+1 ?>.</span>
               <h3 class="About__services--title has-fontsize-64 has-text-left"><?= $service->title() ?></h3>
             </div>
             <img class="is-block ignore-lazy" src="/assets/images/arrow.svg" />
-          </button>
+          </h3>
           <div class="About__services--content js-service-spoiler--container">
             <div class="About__services--text has-fontsize-24 is-column is-6 is-8-touch is-12-phone js-service-spoiler--content">
               <?= $service->description() ?>
