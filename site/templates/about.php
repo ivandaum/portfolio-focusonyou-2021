@@ -41,30 +41,6 @@
     </div>
   </div>
 
-  <div class="About__services is-flex is-center">
-    <div class="container has-text-left has-width-100">
-      <h2 class="is-main-title"><?= $services->title ?></h2>
-      <ul>
-      <?php foreach($services->content as $i => $service): ?>
-        <li class="has-width-100 js-service-spoiler">
-          <h3 class="About__services--btn is-relative has-width-100 is-flex is-baseline is-justified-x js-service-spoiler--btn">
-            <div class="is-flex is-baseline ">
-              <span class="About__services--number has-fontsize-24 has-text-left has-color-grey"><?= $i+1 ?>.</span>
-              <h3 class="About__services--title has-fontsize-64 has-text-left"><?= $service->title() ?></h3>
-            </div>
-            <img class="is-block ignore-lazy" src="/assets/images/arrow.svg" />
-          </h3>
-          <div class="About__services--content js-service-spoiler--container">
-            <div class="About__services--text has-fontsize-24 is-column is-6 is-8-touch is-12-phone js-service-spoiler--content">
-              <?= $service->description() ?>
-            </div>
-          </div>
-        </li>
-      <?php endforeach ?>
-      </ul>
-    </div>
-  </div>
-
   <div class="About__conclusion container is-flex is-center">
     <div class="About__conclusion--content has-text-center">
       <div class="has-color-grey has-fontsize-24"><?= $conclusion->supText ?></div>

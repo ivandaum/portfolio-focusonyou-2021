@@ -15,10 +15,10 @@ return function ($page, $site) {
     'pictures' => $page->pictures()->toFiles()
   );
 
-  $services = (object) array(
-    'title' => $page->serviceTitle(),
-    'content' => $page->services()->toStructure(),
-  );
+  // $services = (object) array(
+  //   'title' => $page->serviceTitle(),
+  //   'content' => $page->services()->toStructure(),
+  // );
 
   $conclusion = (object) array(
     'supText' => $page->conclusionSubtitle(),
@@ -31,7 +31,7 @@ return function ($page, $site) {
     'cover' => $cover,
     'showreel' => $showreel,
     'introduction' => $introduction,
-    'services' => $services,
+    // 'services' => $services,
     'conclusion' => $conclusion
   );
 };

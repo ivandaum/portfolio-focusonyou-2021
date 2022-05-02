@@ -55,34 +55,6 @@ columns:
 
   - width: 2/3
     sections:
-      servicesDatas:
-        type: fields
-        fields:
-          serviceHeadline:
-            type: headline
-            label: Services
-
-          serviceTitle:
-            type: writer
-            marks: false
-            label: Titre
-
-          services:
-            type: structure
-            label: Sercices
-            fields:
-              title:
-                type: text
-                label: Titre du service
-                width: 1/3
-              description:
-                type: textarea
-                width: 2/3
-                label: Description
-                buttons: false
-
-  - width: 2/3
-    sections:
       conclusionWording:
         type: fields
         fields:

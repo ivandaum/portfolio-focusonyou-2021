@@ -25,14 +25,14 @@ export default class extends Highway.Renderer {
     const cover = view.querySelectorAll('.js-about-cover, .js-about-introCover')
     cover.forEach((el) => Parallax.bind(el))
 
-    const spoilers = view.querySelectorAll('.js-service-spoiler')
-    spoilers.forEach((spoiler) => {
-      const btn = spoiler.querySelector('.js-service-spoiler--btn')
-      const container = spoiler.querySelector('.js-service-spoiler--container')
-      const height = container.querySelector('.js-service-spoiler--content').offsetHeight
+    // const spoilers = view.querySelectorAll('.js-service-spoiler')
+    // spoilers.forEach((spoiler) => {
+    //   const btn = spoiler.querySelector('.js-service-spoiler--btn')
+    //   const container = spoiler.querySelector('.js-service-spoiler--container')
+    //   const height = container.querySelector('.js-service-spoiler--content').offsetHeight
 
-      btn.addEventListener('click', () => this.toggleSpoiler({ spoiler, container, height }))
-    })
+    //   btn.addEventListener('click', () => this.toggleSpoiler({ spoiler, container, height }))
+    // })
 
     this.$iframes = view.querySelectorAll('iframe')
     Iframes.bind(this.$iframes)

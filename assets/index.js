@@ -24,6 +24,7 @@ const renderers = {
   about: AboutRenderer,
   project: ProjectRenderer,
   galery: GaleryRenderer,
+  services: DefaultRenderer,
 }
 
 const transitions = {
