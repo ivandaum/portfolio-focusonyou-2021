@@ -24,7 +24,6 @@
 
           <div class="Galery__picture--info">
               <?php if($lastDate !== $currentDate || $lastProject !== $currentProject): ?>
-              <p class="Galery__picture--date has-color-grey"><?= $currentDate ?></p>
               <?php if($isProject): ?>
                 <p class="Galery__picture--title"><?= $picture->page()->title() ?></p>
               <?php endif; ?>

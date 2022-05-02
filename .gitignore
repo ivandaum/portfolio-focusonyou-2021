@@ -8,6 +8,11 @@ Icon
 # ---------------
 
 /media/*
+/content/*
+/dist/*
+!/media/index.html
+!/dist/favicon
+!/dist/fonts
 
 # Lock files
 # ---------------
@@ -42,14 +47,10 @@ Icon
 /site/sessions/*
 !/site/sessions/index.html
 
-content/*
-
 # License
 # ---------------
 /site/config/.license
 node_modules
-
-dist/*
-!dist/fonts
+dist/index*
 
 site/config/

@@ -12,7 +12,7 @@
         </div>
         <div class="Contact__row">
           <h2 class="has-color-lightgrey">Par téléphone</h2>
-          <a class="has-fontsize-32 is-relative is-link-hover" href="tel:<?= $realPhone ?>"><?= $phone ?></a>
+          <a class="has-fontsize-32 is-relative is-link-hover"><?= $phone ?></a>
         </div>
         <div class="Contact__row">
           <h2 class="has-color-lightgrey">Suivez-nous</h2>
