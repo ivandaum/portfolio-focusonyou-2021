@@ -31,11 +31,11 @@
     <?php if($seo->ga): ?>
     <script async src="https://googletagmanager.com/gtag/js?id=<?= $seo->ga ?>"></script>
     <script>
-        window.gaId = <?= $seo->ga ?>;
+        window.gaId = '<?= $seo->ga ?>';
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', <?= $seo->ga ?>);
+        gtag('config', '<?= $seo->ga ?>');
     </script>
     <?php endif; ?>
 </head>
