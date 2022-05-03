@@ -1,0 +1,35 @@
+title: Services et prestations
+
+columns:
+  - width: 2/3
+    sections:
+      servicesDatas:
+        type: fields
+        fields:
+          serviceTitle:
+            type: writer
+            marks: false
+            label: Titre
+
+          text:
+            type: textarea
+            buttons: false
+            label: Texte explicatif
+
+          # pictures:
+          #   extends: fields/images
+          #   max: 1
+
+          services:
+            type: structure
+            label: Sercices
+            fields:
+              title:
+                type: text
+                label: Titre du service
+                width: 1/3
+              description:
+                type: textarea
+                width: 2/3
+                label: Description
+                buttons: false
