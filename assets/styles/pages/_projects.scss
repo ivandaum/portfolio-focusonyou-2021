@@ -30,6 +30,7 @@
   &__item {
     opacity: 1;
     transition: opacity var(--speed) var(--bezier-in-out);
+    overflow: hidden;
 
     &:hover {
       opacity: 0.5;
