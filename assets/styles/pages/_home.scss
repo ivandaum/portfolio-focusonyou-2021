@@ -6,7 +6,6 @@
     z-index: zindex(above-section);
 
     &--item {
-      padding-right: 1em;
       transition: opacity var(--speed) var(--bezier-in-out);
 
       @include phone {
@@ -15,6 +14,7 @@
       }
 
       @include tablet {
+        padding-right: 2em;
         width: 20%;
       }
 
@@ -54,10 +54,6 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         height: 100%;
-      }
-
-      @include desktop {
-        -webkit-line-clamp: 2;
       }
     }
   }
