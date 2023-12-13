@@ -18,6 +18,13 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin tablet {
+  @media all and (min-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
 // from 1023px down (tablet & phone)
 @mixin touch {
   @media all and (max-width: map-get($breakpoints, desktop)) {

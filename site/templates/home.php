@@ -3,7 +3,7 @@
   <ul class="Home__menu container is-absolute is-flex is-right-y has-width-100 is-wrap">
   <?php $i = 0; ?>
   <?php foreach($projects as $project): ?>
-    <li class="Home__menu--item is-column is-2 is-3-touch is-7-phone js-home-menu--item">
+    <li class="Home__menu--item is-column is-12-phone js-home-menu--item">
       <a href="<?= $project->url() ?>" class="Home__menu--link is-block is-relative">
         <p class="has-color-grey has-fontsize-14"><?= $project->category() ?></p>
         <h2 class="Home__menu--title has-fontsize-20"><?= $project->title() ?></h2>
